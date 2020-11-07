@@ -1,3 +1,7 @@
 $(document).ready(function(){
-    alert("Asd");
+    
+  });
+
+$("#login").click(()=>{
+    login
   });
