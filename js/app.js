@@ -10,6 +10,8 @@ $("#login").click(()=>{
         contentType: 'application/json',
         data: JSON.stringify({ "username": $("#username").val(), "password": $("#password").val()})
     }).done((data)=>{
-        alert(data);
+        alert(JSON.stringify(data));
+        Cookies.set('X-Token', data.body.authorized.token);
+        Cookies.set('X-User', $("#username").val());
     })
   });
