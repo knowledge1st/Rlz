@@ -12,8 +12,9 @@ $("#login").click(()=>{
     }).done((data)=>{
         alert(JSON.stringify(data));
         if(data.statusCode==200){
-            Cookies.set('X-Token', data.body.authorized.token, { sameSite: 'None', secure: true });
-            Cookies.set('X-User', $("#username").val(), { sameSite: 'None', secure: true });
+            let _30minutes = new Date(new Date().getTime() + 30 * 60 * 1000);
+            Cookies.set('X-Token', data.body.authorized.token, { expiers:_30minutes,sameSite: 'None', secure: true });
+            Cookies.set('X-User', $("#username").val(), { expires:_30minutes,sameSite: 'None', secure: true });
             window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
         }
     })
