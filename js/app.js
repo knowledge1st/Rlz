@@ -11,7 +11,7 @@ $("#login").click(()=>{
         data: JSON.stringify({ "username": $("#username").val(), "password": $("#password").val()})
     }).done((data)=>{
         alert(JSON.stringify(data));
-        Cookies.set('X-Token', data.body.authorized.token, { sameSite: 'None' }, { secure: true });
-        Cookies.set('X-User', $("#username").val(), { sameSite: 'None' }, { secure: true });
+        Cookies.set('X-Token', data.body.authorized.token, { sameSite: 'None', secure: true });
+        Cookies.set('X-User', $("#username").val(), { sameSite: 'None', secure: true });
     })
   });
