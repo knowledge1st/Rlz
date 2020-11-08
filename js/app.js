@@ -8,5 +8,8 @@ $("#login").click(()=>{
         url:url_auth,
         type:'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ "username": $("#username").val(), "password": $("#password").val()})})
+        data: JSON.stringify({ "username": $("#username").val(), "password": $("#password").val()})
+    }).done((data)=>{
+        alert(data);
+    })
   });
