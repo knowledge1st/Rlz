@@ -16,7 +16,7 @@ $("#login").click(()=>{
             Cookies.withAttributes({ expiers:0.01 ,sameSite: 'None', secure: true })
             Cookies.set('X-Token', data.body.authorized.token);
             Cookies.set('X-User', $("#username").val());
-            window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
+            //window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
         }
     })
   });
