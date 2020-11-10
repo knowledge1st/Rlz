@@ -13,8 +13,9 @@ $("#login").click(()=>{
         if(data.statusCode==200){
             let _30minutes = new Date(new Date().getTime() + 30 * 60 * 1000);
             console.log(_30minutes)
-            Cookies.set('X-Token', data.body.authorized.token, { expiers:0.01 , secure: true });
-            Cookies.set('X-User', $("#username").val(), { expires:0.01 , secure: true });
+            Cookies.withAttributes({ expiers:0.01 ,sameSite: 'None', secure: true })
+            Cookies.set('X-Token', data.body.authorized.token);
+            Cookies.set('X-User', $("#username").val());
             window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
         }
     })
