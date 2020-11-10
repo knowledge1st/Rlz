@@ -13,7 +13,7 @@ $(document).ready(function(){
 $("#getdata").click(()=>{
     let url_data='https://410iwdz3t5.execute-api.us-east-2.amazonaws.com/develop/rlz-data';
     $.ajax({
-        url:url_auth,
+        url:url_data,
         type:'POST',
         contentType: 'application/json',
         headers: { 
