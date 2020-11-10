@@ -13,8 +13,8 @@ $("#login").click(()=>{
         alert(JSON.stringify(data));
         if(data.statusCode==200){
             let _30minutes = new Date(new Date().getTime() + 30 * 60 * 1000);
-            Cookies.set('X-Token', data.body.authorized.token, { expiers:_30minutes,sameSite: 'None', secure: true });
-            Cookies.set('X-User', $("#username").val(), { expires:_30minutes,sameSite: 'None', secure: true });
+            Cookies.set('X-Token', data.body.authorized.token, { expiers:_30minutes ,sameSite: 'None', secure: true });
+            Cookies.set('X-User', $("#username").val(), { expires:_30minutes ,sameSite: 'None', secure: true });
             window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
         }
     })
