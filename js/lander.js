@@ -14,7 +14,7 @@ $("#getdata").click(()=>{
     let url_data='https://410iwdz3t5.execute-api.us-east-2.amazonaws.com/develop/rlz-data';
     $.ajax({
         url:url_data,
-        type:'POST',
+        type:'GET',
         contentType: 'application/json',
         headers: { 
             'X-User': Cookies.get('X-User'),
