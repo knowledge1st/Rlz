@@ -11,12 +11,10 @@ $("#login").click(()=>{
         data: JSON.stringify({ "username": $("#username").val(), "password": $("#password").val()})
     }).done((data)=>{
         if(data.statusCode==200){
-            let _30minutes = new Date(new Date().getTime() + 30 * 60 * 1000);
-            console.log(_30minutes)
             Cookies.withAttributes({ expiers:0.01 ,sameSite: 'None', secure: true })
             Cookies.set('X-Token', data.body.authorized.token);
             Cookies.set('X-User', $("#username").val());
-            //window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
+            window.location.href = 'https://knowledge1st.github.io/Rlz/lander.html';
         }
     })
   });
