@@ -28,6 +28,6 @@ $("#getdata").click(()=>{
           }
         }
     }).done((data)=>{
-        $("#datarlz").text(data+'here');
+        $("#datarlz").text(JSON.stringify(data)+'here');
     });
 })
