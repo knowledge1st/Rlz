@@ -17,8 +17,8 @@ $("#getdata").click(()=>{
         type:'GET',
         contentType: 'application/json',
         headers: { 
-            'X-User': Cookies.get('X-User'),
-            'X-Token':Cookies.get('X-Token')
+            'x-user': Cookies.get('X-User'),
+            'x-token': Cookies.get('X-Token')
         }
     }).done((data)=>{
         $("#datarlz").text(data);
