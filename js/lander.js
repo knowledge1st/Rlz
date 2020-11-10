@@ -20,13 +20,13 @@ $("#getdata").click(()=>{
             'x-user': Cookies.get('X-User'),
             'x-token': Cookies.get('X-Token')
         },
-        data:{
-            search_info: {
-                method: "day_between",
-                param1: "2020-10-20T00:00:00Z",
-                param2: "2020-10-30T00:00:00Z"
+        data:JSON.stringify({
+            "search_info": {
+                "method": "day_between",
+                "param1": "2020-10-20T00:00:00Z",
+                "param2": "2020-10-30T00:00:00Z"
           }
-        }
+        })
     }).done((data)=>{
         $("#datarlz").text(JSON.stringify(data)+'here');
     });
