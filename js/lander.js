@@ -21,10 +21,10 @@ $("#getdata").click(()=>{
             'x-token': Cookies.get('X-Token')
         },
         data:{
-            "search_info": {
-                "method": "day_between",
-                "param1": "2020-10-20T00:00:00Z",
-                "param2": "2020-10-30T00:00:00Z"
+            search_info: {
+                method: "day_between",
+                param1: "2020-10-20T00:00:00Z",
+                param2: "2020-10-30T00:00:00Z"
           }
         }
     }).done((data)=>{
